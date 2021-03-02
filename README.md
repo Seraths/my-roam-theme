@@ -1,2 +1,2 @@
-# my-roam-them
+# my-roam-theme
 Customized Roam Research css.

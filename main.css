@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+/*********  Reading Status Tags  **********/
+
+span.rm-page-ref[data-tag="Status-Finished"],
+span[data-link-title^="Status-Finished"] .rm-page-ref {
+    background: #BC9F77 !important;
+    color: white !important;
+    padding: 3px 6px;
+    line-height: 2em;
+    font-weight: 450;
+}
+
+span.rm-page-ref[data-tag="Status-Reading"],
+span[data-link-title^="Status-Reading"] .rm-page-ref {
+    background: #DAC9A6 !important;
+    color: white !important;
+    padding: 3px 6px;
+    font-weight: 450;
+    line-height: 2em;
+}
+
+span.rm-page-ref[data-tag="Status-Unread"],
+span[data-link-title^="Status-Unread"] .rm-page-ref {
+    background: #B4A582 !important;
+    color: white !important;
+    padding: 3px 6px;
+    line-height: 2em;
+    font-weight: 450;
+}
+
+/*********  Special Tags  **********/
+
+span.rm-page-ref[data-tag="Question"],
+span[data-link-title^="Question"] .rm-page-ref {
+    color: #AB3B3A !important;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+span.rm-page-ref[data-tag="Archive"],
+span[data-link-title^="Archive"] .rm-page-ref {
+    color: #373C38;
+  	line-height: 1.4em;
+    font-weight: 600;
+}
+
+/*********  Notes Tags  **********/
+
+span.rm-page-ref[data-tag="LiteratureNotes"], 
+span[data-link-title^="LiteratureNotes"] .rm-page-ref {
+    color: #616138;
+    line-height: 1.4em;
+	font-weight: 600;
+}
+
+span.rm-page-ref[data-tag="FleetingNotes"],
+span[data-link-title^="FleetingNotes"] .rm-page-ref {
+    color: #939650;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+span.rm-page-ref[data-tag="PermanentNotes"],
+span[data-link-title^="PermanentNotes"] .rm-page-ref {
+    color: #4D5139;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+
+/**********  For Blocks and overall beautify  ************/
+
+/* Page Titles */
+h1.rm-title-display span {
+    /*font-family: 'Playfair Display', serif;*/
+  font-weight: 600;
+}
+
+
+.roam-body .roam-app .roam-sidebar-container {
+background-color: #FFFFFB;
+border-right: 1px #eee solid;
+}
+
+
+#right-sidebar > div {
+background-color: #FFFFFB;
+border-left: 1px solid #e9ebef;
+padding: 20px;
+overflow: none;
+}
+
+
+.roam-body #block-input > span > div {
+padding: 6px 24px;
+background: #FFFFFB;
+}
+
+
+.rm-block-text, .roam-block {
+max-width: 64ch;
+font-size: 1.03em;
+line-height: 1.6em;
+background: #FFFFFB;
+
+}
+
+
+.rm-embed-container {
+background: #FFFFFB;
+border: 1px solid var(--color-subtle-border);
+border-radius: 4px;
+padding: 0.6em 0.4em;
+margin: 0.4em 0;
+}
+
+
+body, #app {
+background: #FFFFFB;
+}
