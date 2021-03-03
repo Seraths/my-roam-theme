@@ -1,6 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+
+/*
+    color: #89916B;
+	color: #AB3B3A;
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
 
 /*********  Reading Status Tags  **********/
+
 
 span.rm-page-ref[data-tag="Status-Finished"],
 span[data-link-title^="Status-Finished"] .rm-page-ref {
@@ -29,7 +39,16 @@ span[data-link-title^="Status-Unread"] .rm-page-ref {
     font-weight: 450;
 }
 
-/*********  Special Tags  **********/
+
+/*********  PARA Tags  **********/
+
+
+span.rm-page-ref[data-tag="Project"],
+span[data-link-title^="Project"] .rm-page-ref {
+    color: #A96360;
+  	line-height: 1.4em;
+    font-weight: 600;
+}
 
 span.rm-page-ref[data-tag="Question"],
 span[data-link-title^="Question"] .rm-page-ref {
@@ -45,77 +64,237 @@ span[data-link-title^="Archive"] .rm-page-ref {
     font-weight: 600;
 }
 
-/*********  Notes Tags  **********/
 
-span.rm-page-ref[data-tag="LiteratureNotes"], 
-span[data-link-title^="LiteratureNotes"] .rm-page-ref {
+/*********  Zettelkasten Tags  **********/
+
+
+span.rm-page-ref[data-tag="Literature Notes"], 
+span[data-link-title^="Literature Notes"] .rm-page-ref {
     color: #616138;
     line-height: 1.4em;
 	font-weight: 600;
 }
 
-span.rm-page-ref[data-tag="FleetingNotes"],
-span[data-link-title^="FleetingNotes"] .rm-page-ref {
+span.rm-page-ref[data-tag="Fleeting Notes"],
+span[data-link-title^="Fleeting Notes"] .rm-page-ref {
     color: #939650;
     line-height: 1.4em;
     font-weight: 600;
 }
 
-span.rm-page-ref[data-tag="PermanentNotes"],
-span[data-link-title^="PermanentNotes"] .rm-page-ref {
+span.rm-page-ref[data-tag="Permanent Notes"],
+span[data-link-title^="Permanent Notes"] .rm-page-ref {
     color: #4D5139;
     line-height: 1.4em;
     font-weight: 600;
 }
 
-
-/**********  For Blocks and overall beautify  ************/
-
 /* Page Titles */
-h1.rm-title-display span {
-    /*font-family: 'Playfair Display', serif;*/
-  font-weight: 600;
+h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
+    font-family: 'Playfair Display', serif;
 }
 
-
-.roam-body .roam-app .roam-sidebar-container {
-background-color: #FFFFFB;
-border-right: 1px #eee solid;
+/* Body */
+.roam-block-container {
+    max-width: 1000px;
 }
-
-
-#right-sidebar > div {
-background-color: #FFFFFB;
-border-left: 1px solid #e9ebef;
-padding: 20px;
-overflow: none;
-}
-
-
-.roam-body #block-input > span > div {
-padding: 6px 24px;
-background: #FFFFFB;
-}
-
-
-.rm-block-text, .roam-block {
-max-width: 64ch;
-font-size: 1.03em;
-line-height: 1.6em;
-background: #FFFFFB;
-
-}
-
-
-.rm-embed-container {
-background: #FFFFFB;
-border: 1px solid var(--color-subtle-border);
-border-radius: 4px;
-padding: 0.6em 0.4em;
-margin: 0.4em 0;
-}
-
 
 body, #app {
-background: #FFFFFB;
+    background: white;
+}
+
+.roam-article {
+    padding-right: 10px !important;
+    max-width: 740px;
+    padding-left: 20px !important;
+}
+
+.roam-article > div {
+    padding: 30px 50px 50px 50px;
+    background: white;
+    box-shadow: #e5f1ee;
+    border: 1px solid #e5f1ee;
+    border-radius: 4px;
+    margin-top: 10px !important;
+    width: auto;
+}
+
+.roam-body-main {
+    top: 0 !important;
+    height: 100% !important;
+    width: auto !important;
+    position: relative !important;
+    padding-left: 50px;
+    min-width: 600px;
+}
+
+.roam-main {
+    width: unset !important;
+    max-width: 100% !important;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: auto;
+    transition: padding-left 0.15s ease-out;
+}
+
+
+.rm-title-editing-display textarea {
+    font-family: 'Playfair Display', serif;
+}
+
+/* When blocks are selected */
+.block-highlight-blue {
+    background-color: #bbcec3 !important;
+    z-index: 99;
+}
+
+.rm-page-ref-brackets {
+  	display: none;
+}
+
+/* Code */
+code {
+    font-family: 'Fira Code', monospace;
+    background: white;
+    border: none;
+    padding: 4px 6px;
+}
+
+/* External Page links */
+a {
+    color: #646A58;
+    text-decoration: underline;
+}
+
+/* General page link and tag colors */
+.rm-page-ref--tag, .rm-page-ref--link {
+    color: #42602D;
+    font-weight: 450;
+}
+
+.rm-reference-item {
+    margin-top: 8px;
+    border-radius: 6px;
+    border: 1px solid #e4e9ee;
+    margin-right: 8px;
+    flex: 1 1 100%;
+    word-break: break-word;
+    background-color: white;
+    padding: 8px;
+}
+
+.rm-reference-main, .rm-query-content {
+    padding: 0.8em;
+}
+
+.rm-reference-main .rm-reference-item {
+    opacity: 100%;
+  	font-weight: 500;
+}
+
+.rm-ref-page-view-title span {
+  	font-weight: 500;
+}
+
+.rm-reference-main .rm-reference-item .controls {
+    margin-left: -1em;
+}
+
+.rm-ref-page-view {
+    padding: 0.4em 0.5em;
+  	color: #40423A;
+}
+
+/* Queries */
+.rm-query {
+    border: 0.5px solid #e4e9ec;
+    border-radius: 5px;
+  }
+
+.rm-query .rm-query-title {
+    background-color: #F7F8F7;
+    padding: 0.8em;
+    color: #B4C8B5;
+    font-size: 80%;
+}
+
+/* Left Sidebar Words */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
+    padding: 10px 5px;
+    color: #89916B;
+}
+
+/* String "Shortcuts" */
+div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
+  font-family: 'Playfair Display', serif;
+    font-size: 1.35em;
+  letter-spacing: 0.08em;
+    color: #89916B;
+}
+
+/* Left Sidebar except the logo on the bottom */
+div.roam-sidebar-container.noselect > div > div {
+  letter-spacing: 0.01em;
+}
+
+/* No idea */
+#block-input {
+  background: white;
+}
+
+/* Entire Roam Body */
+.roam-body #block-input > span > div {
+  padding: 6px 24px;
+  background: white;
+}
+.rm-block-text, .roam-block {
+  max-width: 64ch;
+  font-size: 1.05em;
+  line-height: 1.5em;
+}
+
+/* Right Sidebar */
+#right-sidebar > div {
+    background-color: white;
+    border-left: 1px solid #e9ebef;
+    overflow: none;
+  	padding: 0.8em 0;
+}
+
+.rm-page-ref-brackets {
+    display: None;
+}
+
+/* Embed Blocks */
+.rm-embed-container {
+  background: #E9EDE9;
+}
+
+/* Block References */
+.rm-block-ref::before {
+    content:"";
+    display: inline-block;
+    width: 2px;
+    border-radius: 2px;
+    height: 10px;
+    margin-right: 6px;
+}
+
+.rm-block-ref:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.rm-block-ref {
+    border-bottom: none;
+    font-size: 1em;
+    color: #5A5D4E;
+    opacity: 90%;
+}
+
+.block-ref-count-button {
+    color: #56594A;
+    font-weight: 800;
+    top: -10px;
 }
