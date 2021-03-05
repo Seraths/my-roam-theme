@@ -1,17 +1,9 @@
-
-/*
-    color: #89916B;
-	color: #AB3B3A;
-*/
-
-
-@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,900');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Lora|Playfair+Display:700i,800,900');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
-
+/* Customizable Tags */
 /*********  Reading Status Tags  **********/
-
-
 span.rm-page-ref[data-tag="Status-Finished"],
 span[data-link-title^="Status-Finished"] .rm-page-ref {
     background: #BC9F77 !important;
@@ -39,9 +31,7 @@ span[data-link-title^="Status-Unread"] .rm-page-ref {
     font-weight: 450;
 }
 
-
 /*********  PARA Tags  **********/
-
 
 span.rm-page-ref[data-tag="Project"],
 span[data-link-title^="Project"] .rm-page-ref {
@@ -64,9 +54,7 @@ span[data-link-title^="Archive"] .rm-page-ref {
     font-weight: 600;
 }
 
-
 /*********  Zettelkasten Tags  **********/
-
 
 span.rm-page-ref[data-tag="Literature Notes"], 
 span[data-link-title^="Literature Notes"] .rm-page-ref {
@@ -89,8 +77,15 @@ span[data-link-title^="Permanent Notes"] .rm-page-ref {
     font-weight: 600;
 }
 
+
+/* Body */
+
 /* Page Titles */
 h1, h2, h3, h4, h5, h6, .rm-level1, .rm-level2, .rm-level3 .rm-title-editing-display {
+    font-family: 'Playfair Display', serif;
+}
+
+.rm-title-editing-display textarea {
     font-family: 'Playfair Display', serif;
 }
 
@@ -113,7 +108,7 @@ body, #app {
     padding: 30px 50px 50px 50px;
     background: white;
     box-shadow: #e5f1ee;
-    border: 1px solid #e5f1ee;
+    border: 1px solid #DCDFE6;
     border-radius: 4px;
     margin-top: 10px !important;
     width: auto;
@@ -139,10 +134,7 @@ body, #app {
 }
 
 
-.rm-title-editing-display textarea {
-    font-family: 'Playfair Display', serif;
-}
-
+/* Highlighted Blocks */
 /* When blocks are selected */
 .block-highlight-blue {
     background-color: #bbcec3 !important;
@@ -161,18 +153,14 @@ code {
     padding: 4px 6px;
 }
 
-/* External Page links */
-a {
-    color: #646A58;
-    text-decoration: underline;
-}
-
+/* Referenced Pages */
 /* General page link and tag colors */
 .rm-page-ref--tag, .rm-page-ref--link {
     color: #42602D;
     font-weight: 450;
 }
 
+/* Box of referenced words */
 .rm-reference-item {
     margin-top: 8px;
     border-radius: 6px;
@@ -182,6 +170,7 @@ a {
     word-break: break-word;
     background-color: white;
     padding: 8px;
+  	
 }
 
 .rm-reference-main, .rm-query-content {
@@ -189,21 +178,33 @@ a {
 }
 
 .rm-reference-main .rm-reference-item {
-    opacity: 100%;
+    opacity: 90%;
   	font-weight: 500;
 }
 
 .rm-ref-page-view-title span {
-  	font-weight: 500;
+  	font-family: 'Playfair Display', serif;
+  	font-weight: 800;
+  	font-style: italic;
+  	letter-spacing: 0.02em;
+  	color: #3E4038;
 }
 
 .rm-reference-main .rm-reference-item .controls {
-    margin-left: -1em;
+    margin-left: -0.5em;
 }
 
+
+/* Inner box that surronds all the referenced link */
 .rm-ref-page-view {
     padding: 0.4em 0.5em;
-  	color: #40423A;
+  	color: #3E4038;
+}
+
+/* External Page links */
+.rm-alias.rm-alias--external {
+    color: #3E4038;
+  	font-style: italic;
 }
 
 /* Queries */
@@ -219,23 +220,49 @@ a {
     font-size: 80%;
 }
 
+
+/* Left Sidebar */
+/* Top left hovered */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .top-row:hover {
+    background: #B5CAA0;
+}
+
+/* Top left words */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .rm-db-title {
+    color: #838E7A;
+}
+
 /* Left Sidebar Words */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page {
-    padding: 10px 5px;
-    color: #89916B;
+    padding: 8px 5px;
+    color: #838E7A;
+    font-weight: 450;
+    font-size: 1.1em;
+}
+
+/* left container hovered */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover, .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
+    background: #B5CAA0;
 }
 
 /* String "Shortcuts" */
 div.flex-v-box.starred-pages-wrapper > div.flex-h-box > span {
   font-family: 'Playfair Display', serif;
     font-size: 1.35em;
-  letter-spacing: 0.08em;
-    color: #89916B;
+  letter-spacing: 0.02em;
+    color: #838E7A;
 }
 
 /* Left Sidebar except the logo on the bottom */
 div.roam-sidebar-container.noselect > div > div {
   letter-spacing: 0.01em;
+    background: white;
+    border-right: 1px solid #DCDFE6;
+}
+
+/* Daily notes, graph overview, all pages */
+.roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
+    color: #838E7A;
 }
 
 /* No idea */
@@ -248,18 +275,28 @@ div.roam-sidebar-container.noselect > div > div {
   padding: 6px 24px;
   background: white;
 }
+
 .rm-block-text, .roam-block {
   max-width: 64ch;
   font-size: 1.05em;
   line-height: 1.5em;
 }
 
+
 /* Right Sidebar */
 #right-sidebar > div {
     background-color: white;
-    border-left: 1px solid #e9ebef;
+    border-left: 1px solid #DCDFE6;
     overflow: none;
   	padding: 0.8em 0;
+}
+
+.flex-h-box.window-headers a, .flex-h-box.window-headers span {
+  	color: #69806A;
+}
+
+rm-sidebar-window div {
+  	max-height: none;
 }
 
 .rm-page-ref-brackets {
@@ -268,7 +305,9 @@ div.roam-sidebar-container.noselect > div > div {
 
 /* Embed Blocks */
 .rm-embed-container {
-  background: #E9EDE9;
+  background: #F6F9F6;
+    margin-right: 6px;
+    padding: 0.2em 0.8em;
 }
 
 /* Block References */
@@ -283,7 +322,7 @@ div.roam-sidebar-container.noselect > div > div {
 
 .rm-block-ref:hover {
     cursor: pointer;
-    opacity: 50%;
+    opacity: 70%;
 }
 
 .rm-block-ref {
@@ -297,4 +336,25 @@ div.roam-sidebar-container.noselect > div > div {
     color: #56594A;
     font-weight: 800;
     top: -10px;
+}
+
+/* Collapsible Bars */
+.rm-multibar {
+    border-color: #B4C8B5;
+  	border-width: 1.6px;
+  	opacity: 50%;
+}
+
+/* Buttons on the top bar */
+.bp3-button[class*="bp3-icon-"]::before {
+	color: #838E7A;
+}
+
+span.bp3-icon:empty::before {
+  	color: #838E7A;
+}
+
+/* Bottom left RR logo */
+#roam-sidebar-logo {
+  	display: none;
 }
