@@ -148,9 +148,9 @@ body, #app {
 /* Code */
 code {
     font-family: 'Fira Code', monospace;
-    background: white;
-    border: none;
-    padding: 4px 6px;
+    background: #F0F3EC;
+    border: 1px solid #E8EAE4;
+    padding: 0.15em 0.35em;
 }
 
 /* Referenced Pages */
